@@ -1,0 +1,33 @@
+
+{
+    "name": "mattivdweem/translate",
+    "type": "library",
+    "description": "",
+    "keywords": ["env", "dotenv", "environment","global"],
+    "homepage": "http://github.com/mattivdweem/translate",
+    "license" : "MIT",
+    "authors" : [
+        {
+            "name": "Matti van de Weem",
+            "email": "matti@hatmedia.nl",
+			"role": "Developer",
+            "homepage": "http://www.mattivandeweem.nl"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
+    },
+     "autoload": {
+        "psr-4": {
+            "mattivdweem\\translate\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.4-dev"
+        }
+    }
+}
