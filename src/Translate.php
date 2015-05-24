@@ -4,7 +4,7 @@ namespace mattivdweem\translate;
 
 class Translate {
 
-	protected $language;
+	protected $method;
 
 	public function __construct(
 		\MattivdWeem\translate\MethodInterface $method
@@ -13,21 +13,25 @@ class Translate {
 		$this->method = $method;
 	}
 
-	protected function getLanguage()
+	protected function getMethod()
 	{
-		return $this->language;
+		return $this->method;
 	}
 
 	public function translateString($string)
 	{
-		return $this->getLanguage()->receive($string);
+		return $this->getTranslation($string);
 	}
 
 	public function addTranslation($string, $translation)
 	{
-		return $this->getLanguage()->addTranslation($string,$translation);
+		return $this->getMethod()->addTranslation($string,$translation);
 	}
 
+    protected function getTranslation($string)
+    {
+        return $this->method->getTranslations()->getTranslations()[md5($string)]->getTranslation();
+    }
 
 
 

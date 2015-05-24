@@ -23,7 +23,7 @@ class TranslationSet {
         \mattivdweem\translate\Translation $translation
     )
     {
-        $this->translations[] = $translation;
+        $this->translations[md5($translation->getString())] = $translation;
     }
 
     private $translations = array();

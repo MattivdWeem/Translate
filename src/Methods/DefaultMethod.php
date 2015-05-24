@@ -73,8 +73,6 @@ class DefaultMethod implements \mattivdweem\translate\MethodInterface
             );
         }
 
-        print_r($this->translations);
-
     }
 
     /**
