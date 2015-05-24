@@ -12,9 +12,9 @@ Register a new Translation, this Translation needs a method.. you can build your
 
 within this method the language should be set   eq: nl/dutch/french/fr/something you like, we'll accept everything
 
-once done: you can translate a string :D !  `->translateString('');` which is great! 
+once done: you can translate a string :D !  ` ->translateString(''); ` which is great! 
 
-`
+
     <?php
     require('vendor/autoload.php');
     
@@ -32,6 +32,6 @@ once done: you can translate a string :D !  `->translateString('');` which is gr
     
     echo $test->translateString('My string, My string is amazing');
 
-`
+
 
 
