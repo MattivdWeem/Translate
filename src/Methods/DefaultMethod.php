@@ -102,8 +102,7 @@ class DefaultMethod implements MethodInterface
      */
     public function setTranslations($translations)
     {
-
-        if (!array($translations) || empty($translations)) {
+        if (![$translations] || empty($translations)) {
             return false;
         }
 

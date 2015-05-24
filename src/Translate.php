@@ -59,5 +59,4 @@ class Translate
     {
         return $this->method->getTranslations()->getTranslations()[md5($string)]->getTranslation();
     }
-
 }
