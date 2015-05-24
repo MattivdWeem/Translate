@@ -2,14 +2,14 @@
 {
     "name": "mattivdweem/translate",
     "type": "library",
-    "description": "",
-    "keywords": ["env", "dotenv", "environment","global"],
+    "description": "Simple translation class set for PHP",
+    "keywords": ["Translation", "multilang"],
     "homepage": "http://github.com/MattivdWeem/Translate",
     "license" : "MIT",
     "authors" : [
         {
             "name": "Matti van de Weem",
-            "email": "matti@hatmedia.nl",
+            "email": "mvdweem@gmail.com",
 			"role": "Developer",
             "homepage": "http://www.mattivandeweem.nl"
         }
