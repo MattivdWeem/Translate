@@ -1,6 +1,4 @@
 index.php
 .env
-.DS_STORE
 vendor
 composer.phar
-.idea

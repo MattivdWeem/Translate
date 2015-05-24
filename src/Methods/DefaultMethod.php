@@ -7,7 +7,6 @@
 **/
 namespace MattivdWeem\Translate\Methods;
 
-use MattivdWeem\Translate\Exceptions\Exception;
 use MattivdWeem\Translate\Exceptions\FileNotFoundException;
 use MattivdWeem\Translate\MethodInterface;
 use MattivdWeem\Translate\Translation;
@@ -94,7 +93,6 @@ class DefaultMethod implements MethodInterface
     {
         $this->language = $language;
     }
-
 
 
 

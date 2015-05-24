@@ -1,6 +1,6 @@
 
 {
-    "name": "MattivdWeem/Translate",
+    "name": "matti-vd-weem/translate",
     "type": "library",
     "description": "",
     "keywords": ["env", "dotenv", "environment","global"],
