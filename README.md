@@ -2,6 +2,7 @@
 php library for simple text translation
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/e3c879ee-a463-49f7-b041-bd5adeac93db/big.png)](https://insight.sensiolabs.com/projects/e3c879ee-a463-49f7-b041-bd5adeac93db)
+[![StyleCI](https://styleci.io/repos/36128977/shield)](https://styleci.io/repos/36128977)
 
 usage:
 
