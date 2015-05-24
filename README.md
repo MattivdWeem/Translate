@@ -1,6 +1,8 @@
 # Translate
 php library for simple text translation
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/e3c879ee-a463-49f7-b041-bd5adeac93db/big.png)](https://insight.sensiolabs.com/projects/e3c879ee-a463-49f7-b041-bd5adeac93db)
+
 usage:
 
 We are currently using the dev files, the json file handler will be sepporated but for development purpose we'll just leave it here
