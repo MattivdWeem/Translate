@@ -2,6 +2,8 @@
 
 namespace MattivdWeem\Translate;
 
+use MattivdWeem\Translate\Translation;
+
 class TranslationSet {
     /**
      * @return mixed
@@ -20,7 +22,7 @@ class TranslationSet {
     }
 
     public function addTranslation(
-        \MattivdWeem\Translate\Translation $translation
+        Translation $translation
     )
     {
         $this->translations[md5($translation->getString())] = $translation;

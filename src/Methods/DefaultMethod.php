@@ -8,8 +8,12 @@
 namespace MattivdWeem\Translate\Methods;
 
 use MattivdWeem\Translate\Exceptions\Exception;
+use MattivdWeem\Translate\Exceptions\FileNotFoundException;
+use MattivdWeem\Translate\MethodInterface;
+use MattivdWeem\Translate\Translation;
+use MattivdWeem\Translate\TranslationSet;
 
-class DefaultMethod implements \MattivdWeem\Translate\MethodInterface
+class DefaultMethod implements MethodInterface
 {
 
     /**
@@ -21,7 +25,7 @@ class DefaultMethod implements \MattivdWeem\Translate\MethodInterface
     public function __construct($lang)
     {
         $this->setLanguage($lang);
-        $this->translations = new \MattivdWeem\Translate\TranslationSet();
+        $this->translations = new TranslationSet();
         $this->getTranslationSet();
     }
 
@@ -33,12 +37,12 @@ class DefaultMethod implements \MattivdWeem\Translate\MethodInterface
 
     /**
      * @return mixed
-     * @throws \MattivdWeem\Translate\Exceptions\FileNotFoundException
+     * @throws FileNotFoundException
      */
     private function getTranslationFileContents()
     {
         if (!file_exists($file = __DIR__.'/../../storage/'.$this->getLanguage().'.json')) {
-            throw(new \MattivdWeem\Translate\Exceptions\FileNotFoundException($file));
+            throw(new FileNotFoundException($file));
         }
         return json_decode(file_get_contents($file));
     }
@@ -65,7 +69,7 @@ class DefaultMethod implements \MattivdWeem\Translate\MethodInterface
     {
 
         foreach ($translations as $translation) {
-            $this->translations->addTranslation(new \MattivdWeem\Translate\Translation(
+            $this->translations->addTranslation(new Translation(
                     $translation->string,
                     $translation->translation,
                     $this->getLanguage()

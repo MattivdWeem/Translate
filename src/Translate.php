@@ -2,32 +2,60 @@
 
 namespace MattivdWeem\Translate;
 
+use MattivdWeem\Translate\MethodInterface;
+
+/**
+ * Class Translate
+ * @package MattivdWeem\Translate
+ */
 class Translate {
 
-	protected $method;
+    /**
+     * @var MethodInterface
+     */
+    protected $method;
 
-	public function __construct(
-		\MattivdWeem\Translate\MethodInterface $method
+    /**
+     * @param MethodInterface $method
+     */
+    public function __construct(
+		MethodInterface $method
 	)
 	{
 		$this->method = $method;
 	}
 
-	protected function getMethod()
+    /**
+     * @return MethodInterface
+     */
+    protected function getMethod()
 	{
 		return $this->method;
 	}
 
-	public function translateString($string)
+    /**
+     * @param $string
+     * @return mixed
+     */
+    public function translateString($string)
 	{
 		return $this->getTranslation($string);
 	}
 
-	public function addTranslation($string, $translation)
+    /**
+     * @param $string
+     * @param $translation
+     * @return mixed
+     */
+    public function addTranslation($string, $translation)
 	{
 		return $this->getMethod()->addTranslation($string,$translation);
 	}
 
+    /**
+     * @param $string
+     * @return mixed
+     */
     protected function getTranslation($string)
     {
         return $this->method->getTranslations()->getTranslations()[md5($string)]->getTranslation();
