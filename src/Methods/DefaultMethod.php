@@ -5,9 +5,11 @@
 	The default language will use the default database handler for sellectiong your texts
 
 **/
-namespace MattivdWeem\translate\Methods;
+namespace mattivdweem\translate\Methods;
 
-class DefaultMethod implements \mattivdweem\translate\LanguageInterface
+use mattivdweem\translate\Exceptions\Exception;
+
+class DefaultMethod implements \mattivdweem\translate\MethodInterface
 {
 
     /**
@@ -19,24 +21,34 @@ class DefaultMethod implements \mattivdweem\translate\LanguageInterface
     public function __construct($lang)
     {
         $this->setLanguage($lang);
-        $this->setTranslations($this->getTranslationSet());
+        $this->translations = new \mattivdweem\translate\TranslationSet();
+        $this->getTranslationSet();
     }
 
     private function getTranslationSet()
     {
         // method to receive the entire translation set
+        $this->setTranslations($this->getTranslationFileContents());
     }
 
-    public function setTranslation($word, $translation)
+    /**
+     * @return mixed
+     * @throws \mattivdweem\translate\Exceptions\FileNotFoundException
+     */
+    private function getTranslationFileContents()
+    {
+        if (!file_exists($file = __DIR__.'/../../storage/'.$this->getLanguage().'.json')) {
+            throw(new \mattivdweem\translate\Exceptions\FileNotFoundException($file));
+        }
+        return json_decode(file_get_contents($file));
+    }
+
+
+    public function setTranslation($string, $translation)
     {
         // method for setting a translation
-        return new \mattivdweem\translate\TranslationSet();
     }
 
-    public function getTranslation($word)
-    {
-        // method for receiving a translation
-    }
 
     /**
      * @return mixed
@@ -51,7 +63,18 @@ class DefaultMethod implements \mattivdweem\translate\LanguageInterface
      */
     public function setTranslations($translations)
     {
-        $this->translations = $translations;
+
+        foreach ($translations as $translation) {
+            $this->translations->addTranslation(new \mattivdweem\translate\Translation(
+                    $translation->string,
+                    $translation->translation,
+                    $this->getLanguage()
+                )
+            );
+        }
+
+        print_r($this->translations);
+
     }
 
     /**

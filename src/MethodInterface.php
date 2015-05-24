@@ -2,13 +2,13 @@
 
 namespace mattivdweem\translate;
 
-interface LanguageInterface
+interface MethodInterface
 {
 
     // language interface here ...
 
     public function __construct($lang);
-    public function getTranslation($word);
+    public function getTranslations();
     public function setTranslation($word, $translation);
 
 

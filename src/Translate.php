@@ -7,11 +7,10 @@ class Translate {
 	protected $language;
 
 	public function __construct(
-		\MattivdWeem\translate\LanguageInterface $language
+		\MattivdWeem\translate\MethodInterface $method
 	)
 	{
-		$this->language = $language;
-		print_r($language);
+		$this->method = $method;
 	}
 
 	protected function getLanguage()

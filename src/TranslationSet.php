@@ -19,7 +19,14 @@ class TranslationSet {
         $this->translations = $translations;
     }
 
-    private $translations;
+    public function addTranslation(
+        \mattivdweem\translate\Translation $translation
+    )
+    {
+        $this->translations[] = $translation;
+    }
+
+    private $translations = array();
 
 
 }
