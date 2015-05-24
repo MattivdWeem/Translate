@@ -18,22 +18,35 @@ within this method the language should be set   eq: nl/dutch/french/fr/something
 once done: you can translate a string :D !  ` ->translateString(''); ` which is great! 
 
 
-    <?php
-    require('vendor/autoload.php');
-    
-    file_put_contents(__DIR__.'/storage/nl.json',json_encode(
-        [
-            ['string' => 'this is awesome', 'translation' => 'dit is geweldig'],
-            ['string' => 'My string, My string is amazing', 'translation' => 'Mijn string, mijn string is geweldig'],
-        ]
-    ));
-    
-    
-    $test = new \MattivdWeem\Translate\Translate(
-       new \MattivdWeem\Translate\Methods\DefaultMethod('nl')
-    );
-    
-    echo $test->translateString('My string, My string is amazing');
+       <?php
+       use MattivdWeem\Translate\Methods\DefaultMethod;
+       use MattivdWeem\Translate\Translate;
+       
+       require('vendor/autoload.php');
+       
+       file_put_contents(__DIR__.'/storage/nl.json',json_encode(
+           [
+               ['string' => 'this is awesome', 'translation' => 'dit is geweldig'],
+               ['string' => 'My string, My string is amazing', 'translation' => 'Mijn string, mijn string is geweldig'],
+           ]
+       ));
+       
+       
+       $dutch = new Translate(
+           new DefaultMethod('nl')
+       );
+       
+       $english = new Translate(
+           new DefaultMethod('en')
+       );
+       
+       echo $dutch->translateString('My string, My string is amazing');
+       echo "\n";
+       echo $english->translateString('Robbie');
+       
+       
+   
+
 
 
 
