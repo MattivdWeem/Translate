@@ -1,13 +1,13 @@
 <?php
 
-namespace mattivdweem\translate;
+namespace MattivdWeem\Translate;
 
 class Translate {
 
 	protected $method;
 
 	public function __construct(
-		\MattivdWeem\translate\MethodInterface $method
+		\MattivdWeem\Translate\MethodInterface $method
 	)
 	{
 		$this->method = $method;

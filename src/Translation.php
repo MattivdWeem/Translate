@@ -1,6 +1,6 @@
 <?php
 
-namespace mattivdweem\translate;
+namespace MattivdWeem\Translate;
 
 class Translation
 {

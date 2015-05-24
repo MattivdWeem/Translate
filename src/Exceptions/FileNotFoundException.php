@@ -1,5 +1,5 @@
 <?php
-namespace mattivdweem\translate\Exceptions;
+namespace MattivdWeem\Translate\Exceptions;
 
 use Exception as BaseException;
 

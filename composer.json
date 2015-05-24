@@ -1,10 +1,10 @@
 
 {
-    "name": "mattivdweem/translate",
+    "name": "MattivdWeem/Translate",
     "type": "library",
     "description": "",
     "keywords": ["env", "dotenv", "environment","global"],
-    "homepage": "http://github.com/mattivdweem/translate",
+    "homepage": "http://github.com/MattivdWeem/Translate",
     "license" : "MIT",
     "authors" : [
         {
@@ -22,7 +22,7 @@
     },
      "autoload": {
         "psr-4": {
-            "mattivdweem\\translate\\": "src/"
+            "MattivdWeem\\Translate\\": "src/"
         }
     },
     "extra": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace mattivdweem\translate;
+namespace MattivdWeem\Translate;
 
 class TranslationSet {
     /**
@@ -20,7 +20,7 @@ class TranslationSet {
     }
 
     public function addTranslation(
-        \mattivdweem\translate\Translation $translation
+        \MattivdWeem\Translate\Translation $translation
     )
     {
         $this->translations[md5($translation->getString())] = $translation;

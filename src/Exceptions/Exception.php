@@ -1,6 +1,6 @@
 <?php
 
-namespace mattivdweem\translate\Exceptions;
+namespace MattivdWeem\Translate\Exceptions;
 
 class Exception extends \Exception
 {

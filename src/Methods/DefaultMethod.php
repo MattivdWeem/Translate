@@ -5,11 +5,11 @@
 	The default language will use the default database handler for sellectiong your texts
 
 **/
-namespace mattivdweem\translate\Methods;
+namespace MattivdWeem\Translate\Methods;
 
-use mattivdweem\translate\Exceptions\Exception;
+use MattivdWeem\Translate\Exceptions\Exception;
 
-class DefaultMethod implements \mattivdweem\translate\MethodInterface
+class DefaultMethod implements \MattivdWeem\Translate\MethodInterface
 {
 
     /**
@@ -21,7 +21,7 @@ class DefaultMethod implements \mattivdweem\translate\MethodInterface
     public function __construct($lang)
     {
         $this->setLanguage($lang);
-        $this->translations = new \mattivdweem\translate\TranslationSet();
+        $this->translations = new \MattivdWeem\Translate\TranslationSet();
         $this->getTranslationSet();
     }
 
@@ -33,12 +33,12 @@ class DefaultMethod implements \mattivdweem\translate\MethodInterface
 
     /**
      * @return mixed
-     * @throws \mattivdweem\translate\Exceptions\FileNotFoundException
+     * @throws \MattivdWeem\Translate\Exceptions\FileNotFoundException
      */
     private function getTranslationFileContents()
     {
         if (!file_exists($file = __DIR__.'/../../storage/'.$this->getLanguage().'.json')) {
-            throw(new \mattivdweem\translate\Exceptions\FileNotFoundException($file));
+            throw(new \MattivdWeem\Translate\Exceptions\FileNotFoundException($file));
         }
         return json_decode(file_get_contents($file));
     }
@@ -65,7 +65,7 @@ class DefaultMethod implements \mattivdweem\translate\MethodInterface
     {
 
         foreach ($translations as $translation) {
-            $this->translations->addTranslation(new \mattivdweem\translate\Translation(
+            $this->translations->addTranslation(new \MattivdWeem\Translate\Translation(
                     $translation->string,
                     $translation->translation,
                     $this->getLanguage()
