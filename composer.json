@@ -1,6 +1,6 @@
 
 {
-    "name": "matti-vd-weem/translate",
+    "name": "mattivdweem/translate",
     "type": "library",
     "description": "",
     "keywords": ["env", "dotenv", "environment","global"],
@@ -27,7 +27,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1.4-dev"
+            "dev-master": "1.0.0"
         }
     }
 }
