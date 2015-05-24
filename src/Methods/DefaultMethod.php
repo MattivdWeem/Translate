@@ -5,9 +5,9 @@
 	The default language will use the default database handler for sellectiong your texts
 
 **/
-namespace MattivdWeem\translate\Languages;
+namespace MattivdWeem\translate\Methods;
 
-class DefaultLang implements \mattivdweem\translate\LanguageInterface
+class DefaultMethod implements \mattivdweem\translate\LanguageInterface
 {
 
     /**
