@@ -2,9 +2,10 @@
 
 /**
 
-	The default language will use the default database handler for sellectiong your texts
+ The default language will use the default database handler for sellectiong your texts
 
-**/
+ **/
+
 namespace MattivdWeem\Translate\Methods;
 
 use MattivdWeem\Translate\Exceptions\FileNotFoundException;
@@ -14,7 +15,6 @@ use MattivdWeem\Translate\TranslationSet;
 
 class DefaultMethod implements MethodInterface
 {
-
     /**
      * @var
      */
@@ -35,23 +35,23 @@ class DefaultMethod implements MethodInterface
     }
 
     /**
-     * @return mixed
      * @throws FileNotFoundException
+     *
+     * @return mixed
      */
     private function getTranslationFileContents()
     {
         if (!file_exists($file = __DIR__.'/../../storage/'.$this->getLanguage().'.json')) {
             throw(new FileNotFoundException($file));
         }
+
         return json_decode(file_get_contents($file));
     }
-
 
     public function setTranslation($string, $translation)
     {
         // method for setting a translation
     }
-
 
     /**
      * @return mixed
@@ -66,7 +66,6 @@ class DefaultMethod implements MethodInterface
      */
     public function setTranslations($translations)
     {
-
         foreach ($translations as $translation) {
             $this->translations->addTranslation(new Translation(
                     $translation->string,
@@ -75,7 +74,6 @@ class DefaultMethod implements MethodInterface
                 )
             );
         }
-
     }
 
     /**
@@ -93,7 +91,4 @@ class DefaultMethod implements MethodInterface
     {
         $this->language = $language;
     }
-
-
-
 }

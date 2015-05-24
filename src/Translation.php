@@ -4,7 +4,6 @@ namespace MattivdWeem\Translate;
 
 class Translation
 {
-
     private $string;
     private $translation;
     private $language;
@@ -63,5 +62,4 @@ class Translation
         $this->setString($string);
         $this->setTranslation($translation);
     }
-
 }
