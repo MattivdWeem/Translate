@@ -47,7 +47,7 @@ class Translate
      */
     public function addTranslation($string, $translation)
     {
-        return $this->getMethod()->addTranslation($string, $translation);
+        return $this->getMethod()->setTranslation($string, $translation);
     }
 
     /**
@@ -59,4 +59,5 @@ class Translate
     {
         return $this->method->getTranslations()->getTranslations()[md5($string)]->getTranslation();
     }
+
 }

@@ -20,10 +20,28 @@ class DefaultMethod implements MethodInterface
      */
     private $translations;
     private $language;
+    private $dir;
+
+    /**
+     * @return string
+     */
+    public function getDir()
+    {
+        return $this->dir;
+    }
+
+    /**
+     * @param string $dir
+     */
+    public function setDir($dir)
+    {
+        $this->dir = $dir;
+    }
 
     public function __construct($lang)
     {
         $this->setLanguage($lang);
+        $this->setDir(__DIR__.'/../../storage/');
         $this->translations = new TranslationSet();
         $this->getTranslationSet();
     }
@@ -41,7 +59,7 @@ class DefaultMethod implements MethodInterface
      */
     private function getTranslationFileContents()
     {
-        if (!file_exists($file = __DIR__.'/../../storage/'.$this->getLanguage().'.json')) {
+        if (!file_exists($file = $this->getDir().$this->getLanguage().'.json')) {
             throw(new FileNotFoundException($file));
         }
 
@@ -51,6 +69,24 @@ class DefaultMethod implements MethodInterface
     public function setTranslation($string, $translation)
     {
         // method for setting a translation
+        $file = $this->getDir().$this->getLanguage().'.json';
+        $this->translations->addTranslation(new Translation($string, $translation, $this->getLanguage()));
+
+        $contents = (array) $this->getTranslationFileContents();
+        $isUsed = false;
+        foreach ($contents as $key => $content) {
+            if ($content->string == $string) {
+                $output[$key] = ['string' => $string, 'translation' => $translation];
+                $isUsed = true;
+                continue;
+            }
+            $output[$key] = $content;
+        }
+
+        if (!$isUsed) {
+            $output[] = ['string' => $string, 'translation' => $translation];
+        }
+        file_put_contents($file, json_encode($output));
     }
 
     /**
@@ -66,6 +102,11 @@ class DefaultMethod implements MethodInterface
      */
     public function setTranslations($translations)
     {
+
+        if (!array($translations) || empty($translations)) {
+            return false;
+        }
+
         foreach ($translations as $translation) {
             $this->translations->addTranslation(new Translation(
                     $translation->string,
