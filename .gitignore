@@ -3,3 +3,4 @@ index.php
 .DS_STORE
 vendor
 composer.phar
+storage

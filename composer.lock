@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bb1915e4064166b917b0f0d1523f5154",
+    "hash": "97b46d9eed62a3ac239aa5c0120d9ce6",
     "packages": [],
     "packages-dev": [
         {
@@ -60,6 +60,53 @@
                 "instantiate"
             ],
             "time": "2014-10-13 12:58:55"
+        },
+        {
+            "name": "mattivdweem/translate-json-strategy",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MattivdWeem/Translate-json-strategy.git",
+                "reference": "a15cd2f990d91733156f4e2eb0e989f0abb8fc39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MattivdWeem/Translate-json-strategy/zipball/a15cd2f990d91733156f4e2eb0e989f0abb8fc39",
+                "reference": "a15cd2f990d91733156f4e2eb0e989f0abb8fc39",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MattivdWeem\\Translate\\JsonStrategy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matti van de Weem",
+                    "email": "mvdweem@gmail.com",
+                    "homepage": "http://www.mattivandeweem.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "json strategy for the Simple translation class set for PHP",
+            "homepage": "http://github.com/MattivdWeem/Translate-json-strategy",
+            "keywords": [
+                "json",
+                "multilang",
+                "translation"
+            ],
+            "time": "2015-05-25 11:35:50"
         },
         {
             "name": "phpdocumentor/reflection-docblock",

@@ -18,7 +18,8 @@
         "php": ">=5.4.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "@stable"
+        "phpunit/phpunit": "@stable",
+        "mattivdweem/translate-json-strategy": "*"
     },
      "autoload": {
         "psr-4": {
