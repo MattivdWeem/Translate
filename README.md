@@ -10,7 +10,7 @@ MIT license :).
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/e3c879ee-a463-49f7-b041-bd5adeac93db/mini.png)](https://insight.sensiolabs.com/projects/e3c879ee-a463-49f7-b041-bd5adeac93db)
 [![StyleCI](https://styleci.io/repos/36128977/shield)](https://styleci.io/repos/36128977)
-
+[![Build Status](https://travis-ci.org/MattivdWeem/Translate.svg)](https://travis-ci.org/MattivdWeem/Translate)
 
 ## How to use
 Create a new instance, register your language and done. Well just take a look at the json example below.
