@@ -24,10 +24,5 @@
         "psr-4": {
             "MattivdWeem\\Translate\\": "src/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.0-dev"
-        }
     }
 }
