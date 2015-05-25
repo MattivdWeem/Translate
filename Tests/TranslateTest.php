@@ -9,9 +9,7 @@
  * file that was distributed with this source code.
  */
 
-
-require(__DIR__.'/../vendor/autoload.php');
-
+require __DIR__.'/../vendor/autoload.php';
 
 use PHPUnit_Framework_TestCase as TestCase;
 
@@ -22,7 +20,6 @@ use PHPUnit_Framework_TestCase as TestCase;
  */
 class TranslateTest extends TestCase
 {
-
     public $langInstance;
     /**
      * @dataProvider creationProvider
@@ -37,9 +34,10 @@ class TranslateTest extends TestCase
     public function testCreateTest()
     {
         try {
-            $this->langInstance->addTranslation('testCase','AnotherTestCase');
+            $this->langInstance->addTranslation('testCase', 'AnotherTestCase');
         } catch (Exception $e) {
             $this->assertTrue(true);
+
             return;
         }
         $this->assertTrue(true);
