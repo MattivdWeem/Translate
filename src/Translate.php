@@ -8,23 +8,23 @@ namespace MattivdWeem\Translate;
 class Translate
 {
     /**
-     * @var MethodInterface
+     * @var StrategyInterface
      */
     protected $method;
 
     /**
-     * @param MethodInterface $method
+     * @param StrategyInterface $method
      */
     public function __construct(
-        MethodInterface $method
+        StrategyInterface $method
     ) {
         $this->method = $method;
     }
 
     /**
-     * @return MethodInterface
+     * @return StrategyInterface
      */
-    protected function getMethod()
+    protected function getStrategy()
     {
         return $this->method;
     }
@@ -47,7 +47,7 @@ class Translate
      */
     public function addTranslation($string, $translation)
     {
-        return $this->getMethod()->setTranslation($string, $translation);
+        return $this->getStrategy()->setTranslation($string, $translation);
     }
 
     /**

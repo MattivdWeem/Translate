@@ -2,7 +2,7 @@
 
 namespace MattivdWeem\Translate;
 
-interface MethodInterface
+interface StrategyInterface
 {
     // language interface here ...
 

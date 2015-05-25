@@ -6,14 +6,14 @@
 
  **/
 
-namespace MattivdWeem\Translate\Methods;
+namespace MattivdWeem\Translate\Strategys;
 
 use MattivdWeem\Translate\Exceptions\FileNotFoundException;
-use MattivdWeem\Translate\MethodInterface;
+use MattivdWeem\Translate\StrategyInterface;
 use MattivdWeem\Translate\Translation;
 use MattivdWeem\Translate\TranslationSet;
 
-class DefaultMethod implements MethodInterface
+class DefaultStrategy implements StrategyInterface
 {
     /**
      * @var
