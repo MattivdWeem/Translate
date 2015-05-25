@@ -2,16 +2,14 @@
 A simple translation library for php, leans on components. Fully leans on composer for loading, easy extandable.
 MIT license :).
 
-<p align="center">
+
 [![StyleCI](http://mattivandeweem.nl/ci/translate-matti.jpg)](http://mattivandeweem.nl/ci/translate-matti.jpg)
 
 
 [![Latest Stable Version](https://poser.pugx.org/mattivdweem/translate/v/stable)](https://packagist.org/packages/mattivdweem/translate) [![Total Downloads](https://poser.pugx.org/mattivdweem/translate/downloads)](https://packagist.org/packages/mattivdweem/translate) [![Latest Unstable Version](https://poser.pugx.org/mattivdweem/translate/v/unstable)](https://packagist.org/packages/mattivdweem/translate) [![License](https://poser.pugx.org/mattivdweem/translate/license)](https://packagist.org/packages/mattivdweem/translate)
 
-<br />
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/e3c879ee-a463-49f7-b041-bd5adeac93db/mini.png)](https://insight.sensiolabs.com/projects/e3c879ee-a463-49f7-b041-bd5adeac93db)
 [![StyleCI](https://styleci.io/repos/36128977/shield)](https://styleci.io/repos/36128977)
-</p>
 
 
 ## How to use
@@ -64,7 +62,9 @@ Make shure your contribution gets trough the Travis, StyleCI and the Sensio Labs
 
 
 
-### License
+License
+====
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Matti van de Weem
