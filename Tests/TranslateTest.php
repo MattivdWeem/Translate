@@ -1,24 +1,8 @@
 <?php
 
-/*
- * This file is part of Matrices.
- *
- * (c) Graham Campbell <graham@mineuk.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 require __DIR__.'/../vendor/autoload.php';
 
-use PHPUnit_Framework_TestCase as TestCase;
-
-/**
- * This is the abstract matrix test case class.
- *
- * @author Graham Campbell <graham@mineuk.com>
- */
-class TranslateTest extends TestCase
+class TranslateTest extends PHPUnit_Framework_TestCase
 {
     public $langInstance;
     /**
