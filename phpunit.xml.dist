@@ -15,7 +15,7 @@
          verbose="true"
         >
     <testsuites>
-        <testsuite name="Matrices Test Suite">
+        <testsuite name="Translation Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
