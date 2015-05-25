@@ -32,6 +32,7 @@ class TranslateTest extends TestCase
             );
         } catch (Exception $e) {
             $this->assertTrue(false);
+
             return;
         }
         $this->assertTrue(true);
@@ -53,5 +54,4 @@ class TranslateTest extends TestCase
     {
         $this->assertTrue(is_string($this->langInstance->translateString('testCase')));
     }
-
 }
