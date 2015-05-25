@@ -26,9 +26,15 @@ class TranslateTest extends TestCase
      */
     public function setUp()
     {
-        $this->langInstance = new \MattivdWeem\Translate\Translate(
-            new \MattivdWeem\Translate\JsonStrategy\JsonStrategy('nl')
-        );
+        try {
+            $this->langInstance = new \MattivdWeem\Translate\Translate(
+                new \MattivdWeem\Translate\JsonStrategy\JsonStrategy('nl')
+            );
+        } catch (Exception $e) {
+            $this->assertTrue(false);
+            return;
+        }
+        $this->assertTrue(true);
     }
 
     public function testCreateTest()
@@ -36,7 +42,7 @@ class TranslateTest extends TestCase
         try {
             $this->langInstance->addTranslation('testCase', 'AnotherTestCase');
         } catch (Exception $e) {
-            $this->assertTrue(true);
+            $this->assertTrue(false);
 
             return;
         }
@@ -47,4 +53,5 @@ class TranslateTest extends TestCase
     {
         $this->assertTrue(is_string($this->langInstance->translateString('testCase')));
     }
+
 }
