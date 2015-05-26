@@ -41,6 +41,11 @@ Once evertying is loaded via comopser, you should require the autoloader and reg
     echo $dutch->translateString('input');
 
 
+## Known available Strategy's
+| Name 	|  Completed | Package |
+|:------------:	|:---------:	|
+| JSON local stored | [x] | `mattivdweem/translate-json-strategy` |
+
 ## How it works
 Basicly the class is a simple key => $value loader, every translation is getting registered as an translation object and will be pushed in a translationSet This translation set will be returned.
 
